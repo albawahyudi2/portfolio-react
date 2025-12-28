@@ -50,7 +50,7 @@ const ProfileImage = memo(() => (
           <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
           
           <img
-  src="/profile.jpg"
+  src="/profile.png"
   alt="Profile"
   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
   loading="lazy"
@@ -77,14 +77,6 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
         <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10 transition-transform group-hover:rotate-6">
           <Icon className="w-8 h-8 text-white" />
         </div>
-        <span 
-          className="text-4xl font-bold text-white"
-          data-aos="fade-up-left"
-          data-aos-duration="1500"
-          data-aos-anchor-placement="top-bottom"
-        >
-          {value}
-        </span>
       </div>
 
       <div>
@@ -235,7 +227,8 @@ const AboutPage = () => {
                 <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
               </button>
               </a>
-              <a href="#Portofolio" className="w-full lg:w-auto">
+              {/* Modifikasi: Ganti href dari "#Portofolio" ke link Google Drive langsung */}
+              <a href="https://drive.google.com/drive/folders/1j-T1WXMvh2O332af3Kx0nLJ9KLfinqqm?usp=drive_link" target="_blank" rel="noopener noreferrer" className="w-full lg:w-auto">
               <button 
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -259,7 +252,7 @@ const AboutPage = () => {
         </a>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-20px); }

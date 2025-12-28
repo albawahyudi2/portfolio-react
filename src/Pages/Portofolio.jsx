@@ -11,7 +11,7 @@ import TechStackIcon from "../components/TechStackIcon";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Code, Award, Boxes } from "lucide-react";
-import TranskripImage from "../assets/transkrip.jpg";
+import TranskripPDF from "../assets/transkrip.pdf";
 
 
 // ===============================
@@ -194,17 +194,17 @@ export default function Portfolio() {
 
       {/* GAMBAR TRANSKRIP */}
       <div className="flex justify-center mb-6">
-        <img
-          src={TranskripImage}
-          alt="Transkrip Nilai"
-          className="
-            w-full
-            max-h-[500px]
-            object-contain
-            rounded-xl
-            border border-white/10
-          "
-        />
+        <iframe
+        src={TranskripPDF}
+        title="Transkrip Nilai PDF"
+        className="
+          w-full
+          h-[900px]
+          rounded-xl
+          border border-white/10
+          bg-white
+        "
+      />
       </div>
 
       {/* INFO */}
@@ -227,20 +227,21 @@ export default function Portfolio() {
 
       {/* BUTTON */}
       <div className="flex justify-center mt-6">
-        <a
-          href={TranskripImage}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            px-6 py-3
-            rounded-xl
-            bg-gradient-to-r from-[#6366f1] to-[#a855f7]
-            text-white font-semibold
-            hover:scale-105 transition
-          "
-        >
-          Lihat Transkrip Full
-        </a>
+<a
+  href={TranskripPDF}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    px-6 py-3
+    rounded-xl
+    bg-gradient-to-r from-[#6366f1] to-[#a855f7]
+    text-white font-semibold
+    hover:scale-105 transition
+  "
+>
+  Lihat Transkrip Full
+</a>
+
       </div>
     </div>
   </div>

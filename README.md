@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio V5
 
 Hello everyone\! 👋
@@ -246,3 +247,6 @@ If you have any questions or need help with the setup, feel free to reach out\!
 
 ⭐ If this project helped you, please consider giving it a star on GitHub\!
 "# portfolio-react" 
+=======
+# porto
+>>>>>>> 6a524ec0383ff1c2e9151468541aed9cb812fb38
