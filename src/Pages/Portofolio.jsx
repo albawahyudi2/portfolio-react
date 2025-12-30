@@ -15,12 +15,6 @@ import TranskripPDF from "../assets/transkrip.pdf";
 
 
 // ===============================
-// GOOGLE DRIVE PROJECT LINK
-// ===============================
-const PROJECT_DRIVE_LINK =
-  "https://drive.google.com/drive/folders/1j-T1WXMvh2O332af3Kx0nLJ9KLfinqqm?usp=drive_link";
-
-// ===============================
 // TAB PANEL
 // ===============================
 function TabPanel({ children, value, index, ...other }) {
@@ -68,6 +62,72 @@ const techStacks = [
   { icon: "laravel.jpeg", language: "Laravel" },
 ];
 
+const projects = [
+  {
+    type: "laravel",
+    title: "Web Vendor Management",
+    desc: "Sistem manajemen vendor berbasis Laravel",
+    tech: ["Laravel", "MySQL", "Bootstrap"],
+    live: "/pdf/vendor.pdf",
+    repo: "https://github.com/albawahyudi2/vendor-evaluasi",
+  },
+  {
+    type: "laravel",
+    title: "Portofolio Website",
+    desc: "Website portofolio pribadi untuk menampilkan proyek, informasi akademik, dengan tampilan modern dan responsif",
+    tech: ["JavaScript", "CSS", "Bootstrap", "HTML"], // Placeholder, ganti jika ada link baru
+    repo: "https://github.com/albawahyudi2/portfolio-react", // Placeholder, ganti jika ada repo baru
+  },
+  {
+    type: "laravel",
+    title: "Website Berita Token Koin",
+    desc: "Website untuk menampilkan berita koin blockchain",
+    tech: ["HTML", "CSS", "JavaScript"],
+    live: "https://token-rust-alpha.vercel.app/", // Placeholder, ganti jika ada link baru
+    repo: "https://github.com/albawahyudi2/token", // Placeholder, ganti jika ada repo baru
+  },
+  {
+    type: "figma",
+    title: "UI&UX Dating App",
+    desc: "Desain UI aplikasi online dating",
+    tech: ["Figma"],
+    figma: "https://www.figma.com/design/cZIrSQu6DHTZ6KNfebOzhE/Untitled?t=eNk9xJ66qxVmAnbU-1",
+  },
+  {
+    type: "figma",
+    title: "UI&UX Website Pemesanan",
+    desc: "Desain UI Website Pemesanan Restoran",
+    tech: ["Figma"],
+    figma: "https://www.figma.com/design/td1naG1zxPdjtIOpOKOWU1/Untitled?node-id=0-1&t=0I312zArwMfmFGjT-1", // Placeholder, ganti jika ada link baru
+  },
+  {
+    type: "figma",
+    title: "UI&UX Website UMKM",
+    desc: "Desain UI Website UMKM",
+    tech: ["Figma", "Adobe XD"],
+    figma: "https://www.figma.com/design/H0dEz3TvjlyjmMbHgKRMym/Untitled?t=r5iup9YLDeJZaUA4-1", // Placeholder, ganti jika ada link baru
+  },
+  {
+    type: "pdf",
+    title: "Achievements - me | Microsoft Learn",
+    desc: "Microsoft Azure Ai Fundamentals",
+    file: "/pdf/Achievements - me _ Microsoft Learn.pdf",
+  },
+  {
+    type: "pdf",
+    title: "Sertifikat LTO HIMA",
+    desc: "Leadership Training Organization",
+    file: "/pdf/Sertifikat LTO.pdf", // Placeholder, ganti jika ada file baru
+  },
+  {
+    type: "pdf",
+    title: "Jurnal",
+    desc: "ARTICLE 'Pengaruh Emosi dan Kontrol Diri terhadap Keputusan Trading pada Trader Ritel di Indonesia'",
+    file: "/pdf/jurnal.pdf", // Placeholder, ganti jika ada file baru
+  },
+];
+
+
 // ===============================
 // MAIN COMPONENT
 // ===============================
@@ -83,11 +143,6 @@ export default function Portfolio() {
   // HANDLE TAB CHANGE
   // ===============================
   const handleChange = (event, newValue) => {
-    // Jika klik tab Projects
-    if (newValue === 0) {
-      window.open(PROJECT_DRIVE_LINK, "_blank");
-      return;
-    }
     setValue(newValue);
   };
 
@@ -170,10 +225,80 @@ export default function Portfolio() {
         >
           {/* ================= PROJECTS (REDIRECT ONLY) ================= */}
           <TabPanel value={value} index={0}>
-            <div className="text-center text-slate-400">
-              Redirecting to Google Drive...
-            </div>
-          </TabPanel>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {projects.map((project, index) => (
+      <div
+        key={index}
+        className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:scale-[1.02] transition"
+      >
+        <h3 className="text-white font-bold text-lg">
+          {project.title}
+        </h3>
+
+        <p className="text-slate-400 text-sm mt-2">
+          {project.desc}
+        </p>
+
+        <div className="flex flex-wrap gap-2 mt-3">
+          {project.tech?.map((t, i) => (
+            <span
+              key={i}
+              className="text-xs bg-white/10 px-3 py-1 rounded-full text-slate-300"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-4 flex gap-3">
+          {project.type === "laravel" && (
+            <>
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  className="px-4 py-2 text-sm rounded-lg bg-indigo-600 text-white"
+                >
+                  Tampilan Website
+                </a>
+              )}
+              <a
+                href={project.repo}
+                target="_blank"
+                className="px-4 py-2 text-sm rounded-lg border border-white/20 text-white"
+              >
+                Source Code
+              </a>
+            </>
+          )}
+
+          {project.type === "figma" && (
+            <a
+              href={project.figma}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="px-4 py-2 text-sm rounded-lg bg-pink-600 text-white"
+            >
+              View Figma
+            </a>
+          )}
+
+          {project.type === "pdf" && (
+            <a
+              href={project.file}
+              target="_blank"
+              className="px-4 py-2 text-sm rounded-lg bg-emerald-600 text-white"
+            >
+              View PDF
+            </a>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</TabPanel>
+
 
           {/* ================= TRANSKRIP NILAI ================= */}
 <TabPanel value={value} index={1}>
