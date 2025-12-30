@@ -146,7 +146,7 @@ const AboutPage = () => {
       icon: Code,
       color: "from-[#6366f1] to-[#a855f7]",
       value: totalProjects,
-      label: "Total Projects",
+      label: "View Projects",
       description: "Innovative web solutions crafted",
       animation: "fade-right",
     },
@@ -228,15 +228,7 @@ const AboutPage = () => {
               </button>
               </a>
               {/* Modifikasi: Ganti href dari "#Portofolio" ke link Google Drive langsung */}
-              <a href="https://drive.google.com/drive/folders/1j-T1WXMvh2O332af3Kx0nLJ9KLfinqqm?usp=drive_link" target="_blank" rel="noopener noreferrer" className="w-full lg:w-auto">
-              <button 
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10 "
-              >
-                <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
-              </button>
-              </a>
+              
             </div>
           </div>
 
