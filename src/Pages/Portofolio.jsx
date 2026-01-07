@@ -65,6 +65,22 @@ const techStacks = [
 const projects = [
   {
     type: "laravel",
+    title: "Web Perawatan Kendaraan",
+    desc: "Sistem manajemen Perawatan Kendaraan berbasis Laravel",
+    tech: ["Laravel", "MySQL", "Bootstrap"],
+    live: "/pdf/.pdf",
+    repo: "https://github.com/albawahyudi2/alba-autocare",
+  },
+  {
+    type: "laravel",
+    title: "Web Manajemen Perpustakaan",
+    desc: "Sistem manajemen Perpustakaan Digital Laravel",
+    tech: ["Laravel", "MySQL", "Bootstrap"],
+    live: "/pdf/.pdf",
+    repo: "https://github.com/albawahyudi2/manajemen-perpustakaan-digital",
+  },
+  {
+    type: "laravel",
     title: "Web Vendor Management",
     desc: "Sistem manajemen vendor berbasis Laravel",
     tech: ["Laravel", "MySQL", "Bootstrap"],
@@ -75,8 +91,9 @@ const projects = [
     type: "laravel",
     title: "Portofolio Website",
     desc: "Website portofolio pribadi untuk menampilkan proyek, informasi akademik, dengan tampilan modern dan responsif",
-    tech: ["JavaScript", "CSS", "Bootstrap", "HTML"], // Placeholder, ganti jika ada link baru
-    repo: "https://github.com/albawahyudi2/portfolio-react", // Placeholder, ganti jika ada repo baru
+    tech: ["React", "Tailwind CSS", "JavaScript", "Vite"],
+    live: "https://portfolio-react-jade-five.vercel.app/",
+    repo: "https://github.com/albawahyudi2/portfolio-react",
   },
   {
     type: "laravel",
