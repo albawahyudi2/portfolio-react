@@ -71,14 +71,7 @@ const projects = [
     live: "/pdf/.pdf",
     repo: "https://github.com/albawahyudi2/alba-autocare",
   },
-  {
-    type: "laravel",
-    title: "Web Manajemen Perpustakaan",
-    desc: "Sistem manajemen Perpustakaan Digital Laravel",
-    tech: ["Laravel", "MySQL", "Bootstrap"],
-    live: "/pdf/.pdf",
-    repo: "https://github.com/albawahyudi2/manajemen-perpustakaan-digital",
-  },
+
   {
     type: "laravel",
     title: "Web Vendor Management",
