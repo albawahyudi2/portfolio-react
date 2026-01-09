@@ -66,18 +66,18 @@ const projects = [
   {
     type: "laravel",
     title: "Web Perawatan Kendaraan",
-    desc: "Sistem manajemen Perawatan Kendaraan berbasis Laravel",
+    desc: "Sistem manajemen perawatan kendaraan berbasis Laravel",
     tech: ["Laravel", "MySQL", "Bootstrap"],
     live: "/pdf/.pdf",
     repo: "https://github.com/albawahyudi2/alba-autocare",
   },
 
   {
-    type: "laravel",
-    title: "Web Vendor Management",
-    desc: "Sistem manajemen vendor berbasis Laravel",
-    tech: ["Laravel", "MySQL", "Bootstrap"],
-    live: "/pdf/vendor.pdf",
+    type: "Typescript",
+    title: "Web Toko Baju",
+    desc: "Sistem manajemen catalog dan penjualan baju",
+    tech: ["Typescript", "MySQL", "Supabase", "JavaScript", "HTML", "CSS"],
+    live: "https://web-toko-baju.vercel.app/",
     repo: "https://github.com/albawahyudi2/vendor-evaluasi",
   },
   {
