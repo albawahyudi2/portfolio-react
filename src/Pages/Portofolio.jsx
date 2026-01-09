@@ -261,7 +261,7 @@ export default function Portfolio() {
         </div>
 
         <div className="mt-4 flex gap-3">
-          {project.type === "laravel" && (
+          {(project.type === "laravel" || project.type === "Typescript") && (
             <>
               {project.live && (
                 <a
