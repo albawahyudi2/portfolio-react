@@ -78,7 +78,7 @@ const projects = [
     desc: "Sistem manajemen catalog dan penjualan baju",
     tech: ["Typescript", "MySQL", "Supabase", "JavaScript", "HTML", "CSS"],
     live: "https://web-toko-baju.vercel.app/",
-    repo: "https://github.com/albawahyudi2/vendor-evaluasi",
+    repo: "https://github.com/albawahyudi2/toko-baju",
   },
   {
     type: "laravel",
