@@ -81,15 +81,23 @@ const projects = [
     repo: "https://github.com/albawahyudi2/toko-baju",
   },
   {
-    type: "laravel",
+    type: "JavaScript",
     title: "Portofolio Website",
     desc: "Website portofolio pribadi untuk menampilkan proyek, informasi akademik, dengan tampilan modern dan responsif",
     tech: ["React", "Tailwind CSS", "JavaScript", "Vite"],
-    live: "https://portfolio-react-jade-five.vercel.app/",
+    live: "https://portfolio-react-rqlm.vercel.app/",
     repo: "https://github.com/albawahyudi2/portfolio-react",
   },
-  {
+    {
     type: "laravel",
+    title: "Web Aplikasi Laravel",
+    desc: "Deskripsi proyek Laravel Anda di sini",
+    tech: ["Laravel", "MySQL", "Bootstrap"],
+    live: "http://alba-perpustakaan.lovestoblog.com/login",
+    repo: "https://github.com/albawahyudi2/manajemen-perpustakaan-digital",
+  },
+  {
+    type: "HTML",
     title: "Website Berita Token Koin",
     desc: "Website untuk menampilkan berita koin blockchain",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -261,7 +269,7 @@ export default function Portfolio() {
         </div>
 
         <div className="mt-4 flex gap-3">
-          {(project.type === "laravel" || project.type === "Typescript") && (
+          {(project.type === "laravel" || project.type === "Typescript" || project.type === "JavaScript" || project.type === "HTML") && project.live && project.repo && (
             <>
               {project.live && (
                 <a
@@ -272,13 +280,15 @@ export default function Portfolio() {
                   Tampilan Website
                 </a>
               )}
-              <a
-                href={project.repo}
-                target="_blank"
-                className="px-4 py-2 text-sm rounded-lg border border-white/20 text-white"
-              >
-                Source Code
-              </a>
+              {project.repo && (
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  className="px-4 py-2 text-sm rounded-lg border border-white/20 text-white"
+                >
+                  Source Code
+                </a>
+              )}
             </>
           )}
 
