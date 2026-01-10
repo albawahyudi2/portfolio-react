@@ -68,7 +68,7 @@ const projects = [
     title: "Web Perawatan Kendaraan",
     desc: "Sistem manajemen perawatan kendaraan berbasis Laravel",
     tech: ["Laravel", "MySQL", "Bootstrap"],
-    live: "/pdf/.pdf",
+    live: "http://alba-autocare.kesug.com/",
     repo: "https://github.com/albawahyudi2/alba-autocare",
   },
 
