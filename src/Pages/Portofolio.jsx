@@ -243,6 +243,13 @@ export default function Portfolio() {
         >
           {/* ================= PROJECTS (REDIRECT ONLY) ================= */}
           <TabPanel value={value} index={0}>
+  {/* NOTE */}
+  <div className="mb-6 bg-red-600/20 border border-red-500/50 rounded-lg p-4">
+    <p className="text-red-400 text-sm md:text-base text-center font-medium">
+      ⚠️ Note: Jika website tidak terbuka gunakanlah Cloudflare / VPN
+    </p>
+  </div>
+
   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     {projects.map((project, index) => (
       <div
