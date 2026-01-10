@@ -246,7 +246,7 @@ export default function Portfolio() {
   {/* NOTE */}
   <div className="mb-6 bg-red-600/20 border border-red-500/50 rounded-lg p-4">
     <p className="text-red-400 text-sm md:text-base text-center font-medium">
-      ⚠️ Note: Jika website tidak terbuka gunakanlah Cloudflare / VPN
+      ⚠️ Note: Jika website tidak terbuka gunakanlah Cloudflare / VPN (DNS Pribadi)
     </p>
   </div>
 
