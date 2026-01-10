@@ -24,3 +24,8 @@ dist/
 *.sln
 *.sw?
 *.env
+
+# Large files
+*.zip
+*.rar
+*.7z
