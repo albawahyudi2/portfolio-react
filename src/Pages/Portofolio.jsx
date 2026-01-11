@@ -90,8 +90,8 @@ const projects = [
   },
     {
     type: "laravel",
-    title: "Web Aplikasi Laravel",
-    desc: "Deskripsi proyek Laravel Anda di sini",
+    title: "Web Manajemen Perpustakaan Digital",
+    desc: "Deskripsi proyek web manajemen perpustakaan digital berbasis Laravel",
     tech: ["Laravel", "MySQL", "Bootstrap"],
     live: "http://alba-perpustakaan.lovestoblog.com/login",
     repo: "https://github.com/albawahyudi2/manajemen-perpustakaan-digital",
@@ -246,7 +246,7 @@ export default function Portfolio() {
   {/* NOTE */}
   <div className="mb-6 bg-red-600/20 border border-red-500/50 rounded-lg p-4">
     <p className="text-red-400 text-sm md:text-base text-center font-medium">
-      ⚠️ Note: Jika website tidak terbuka gunakanlah Cloudflare / VPN (DNS Pribadi)
+      ⚠️ Note: Jika website tidak terbuka gunakanlah Cloudflare / VPN
     </p>
   </div>
 
