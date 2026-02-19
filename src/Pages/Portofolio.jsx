@@ -64,21 +64,20 @@ const techStacks = [
 
 const projects = [
   {
-    type: "laravel",
-    title: "Web Perawatan Kendaraan",
-    desc: "Sistem manajemen perawatan kendaraan berbasis Laravel",
-    tech: ["Laravel", "MySQL", "Bootstrap"],
-    live: "https://alba-autocare.rf.gd/",
-    repo: "https://github.com/albawahyudi2/alba-autocare",
-  },
-
-  {
     type: "Typescript",
     title: "Web Toko Baju",
     desc: "Sistem manajemen catalog dan penjualan baju",
     tech: ["Typescript", "MySQL", "Supabase", "JavaScript", "HTML", "CSS"],
     live: "https://web-toko-baju.vercel.app/",
     repo: "https://github.com/albawahyudi2/toko-baju",
+  },
+  {
+    type: "laravel",
+    title: "Web Perawatan Kendaraan",
+    desc: "Sistem manajemen perawatan kendaraan berbasis Laravel",
+    tech: ["Laravel", "MySQL", "Bootstrap"],
+    live: "https://alba-autocare.vercel.app/",
+    repo: "https://github.com/albawahyudi2/alba-autocare-next",
   },
   {
     type: "JavaScript",
@@ -88,10 +87,10 @@ const projects = [
     live: "https://portfolio-react-rqlm.vercel.app/",
     repo: "https://github.com/albawahyudi2/portfolio-react",
   },
-    {
+  {
     type: "laravel",
-    title: "Web Aplikasi Laravel",
-    desc: "Deskripsi proyek Laravel Anda di sini",
+    title: "Web Manajemen Perpustakaan Digital",
+    desc: "Deskripsi proyek web manajemen perpustakaan digital berbasis Laravel",
     tech: ["Laravel", "MySQL", "Bootstrap"],
     live: "http://alba-perpustakaan.lovestoblog.com/login",
     repo: "https://github.com/albawahyudi2/manajemen-perpustakaan-digital",
@@ -243,6 +242,7 @@ export default function Portfolio() {
         >
           {/* ================= PROJECTS (REDIRECT ONLY) ================= */}
           <TabPanel value={value} index={0}>
+
   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
     {projects.map((project, index) => (
       <div
