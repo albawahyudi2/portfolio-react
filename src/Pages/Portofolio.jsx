@@ -150,10 +150,10 @@ const projects = [
 // ===============================
 export default function Portfolio() {
   const theme = useTheme();
-  const [value, setValue] = useState(1); // default ke Transkrip Nilai
+  const [value, setValue] = useState(0); // default ke Projects
 
   useEffect(() => {
-    AOS.init({ once: false });
+    AOS.init({ once: true });
   }, []);
 
   // ===============================
@@ -341,6 +341,7 @@ export default function Portfolio() {
         <iframe
         src={TranskripPDF}
         title="Transkrip Nilai PDF"
+        loading="lazy"
         className="
           w-full
           h-[900px]

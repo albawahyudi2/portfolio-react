@@ -13,12 +13,12 @@ import notfound from "./Pages/404";
 import NotFoundPage from "./Pages/404";
 import Projects from "./components/Projects";
 
-const LandingPage = ({ showWelcome, setShowWelcome }) => {
+const LandingPage = ({ showWelcome, onWelcomeComplete }) => {
   return (
     <>
       <AnimatePresence mode="wait">
         {showWelcome && (
-          <WelcomeScreen onLoadingComplete={() => setShowWelcome(false)} />
+          <WelcomeScreen onLoadingComplete={onWelcomeComplete} />
         )}
       </AnimatePresence>
 
@@ -66,12 +66,19 @@ const ProjectPageLayout = () => (
 );
 
 function App() {
-  const [showWelcome, setShowWelcome] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(() => {
+    return sessionStorage.getItem("welcomeShown") !== "true";
+  });
+
+  const handleWelcomeComplete = () => {
+    setShowWelcome(false);
+    sessionStorage.setItem("welcomeShown", "true");
+  };
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage showWelcome={showWelcome} setShowWelcome={setShowWelcome} />} />
+        <Route path="/" element={<LandingPage showWelcome={showWelcome} onWelcomeComplete={handleWelcomeComplete} />} />
         <Route path="/project/:id" element={<ProjectPageLayout />} />
          <Route path="*" element={<NotFoundPage />} /> {/* Ini route 404 */}
       </Routes>

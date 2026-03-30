@@ -49,12 +49,15 @@ const ProfileImage = memo(() => (
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-0 hidden sm:block" />
           <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
           
-          <img
-  src="/profile.png"
-  alt="Profile"
-  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
-  loading="lazy"
-/>
+          <picture>
+            <source srcSet="/profile.webp" type="image/webp" />
+            <img
+              src="/profile.png"
+              alt="Profile"
+              className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+              loading="lazy"
+            />
+          </picture>
 
           {/* Advanced hover effects - desktop only */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 z-20 hidden sm:block">
@@ -120,7 +123,7 @@ const AboutPage = () => {
   useEffect(() => {
     const initAOS = () => {
       AOS.init({
-        once: false, 
+        once: true, 
       });
     };
 
