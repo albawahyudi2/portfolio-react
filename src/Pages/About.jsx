@@ -262,7 +262,7 @@ const AboutPage = () => {
           animation: pulse 3s infinite;
         }
         .animate-spin-slower {
-          animation: spin-slower 8s linear infinite;
+          animation: spin-slower 7s linear infinite;
         }
       `}</style>
     </div>
