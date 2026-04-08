@@ -45,7 +45,7 @@ export default function NotFoundPage() {
             onClick={handleGoBack}
             className="flex items-center gap-2 px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 shadow-md hover:shadow-lg"
           >
-            <ArrowLeft size={25} />
+            <ArrowLeft size={20} />
             Kembali
           </button>
           
