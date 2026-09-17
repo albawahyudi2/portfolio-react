@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 const TypewriterEffect = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
-  
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -17,14 +17,14 @@ const TypewriterEffect = ({ text }) => {
         clearInterval(timer);
       }
     }, 260);
-    
+
     return () => clearInterval(timer);
   }, [text]);
 
   return (
     <span className="inline-block">
       {displayText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse">porto-alba.vercel.app</span>
     </span>
   );
 };
@@ -61,7 +61,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
         onLoadingComplete?.();
       }, 500);
     }, 2200);
-    
+
     return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
@@ -101,11 +101,11 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
           variants={containerVariants}
         >
           <BackgroundEffect />
-          
+
           <div className="relative min-h-screen flex items-center justify-center px-4">
             <div className="w-full max-w-4xl mx-auto">
               {/* Icons */}
-              <motion.div 
+              <motion.div
                 className="flex justify-center gap-3 sm:gap-4 md:gap-8 mb-6 sm:mb-8 md:mb-12"
                 variants={childVariants}
               >
@@ -117,7 +117,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
               </motion.div>
 
               {/* Welcome Text */}
-              <motion.div 
+              <motion.div
                 className="text-center mb-6 sm:mb-8 md:mb-12"
                 variants={childVariants}
               >
@@ -145,7 +145,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
               </motion.div>
 
               {/* Website Link */}
-              <motion.div 
+              <motion.div
                 className="text-center"
                 variants={childVariants}
                 data-aos="fade-up"
