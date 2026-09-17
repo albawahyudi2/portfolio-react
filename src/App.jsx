@@ -1,17 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import "./index.css";
-import About from "./Pages/About";
 import AnimatedBackground from "./components/Background";
 import Navbar from "./components/Navbar";
-import Portofolio from "./Pages/Portofolio";
-import ContactPage from "./Pages/Contact";
-import ProjectDetails from "./components/ProjectDetail";
 import WelcomeScreen from "./Pages/WelcomeScreen";
 import { AnimatePresence } from 'framer-motion';
-import notfound from "./Pages/404";
-import NotFoundPage from "./Pages/404";
-import Projects from "./components/Projects";
+
+// Lazy load semua pages agar tidak diload sekaligus saat pertama buka
+const About = lazy(() => import("./Pages/About"));
+const Portofolio = lazy(() => import("./Pages/Portofolio"));
+const ContactPage = lazy(() => import("./Pages/Contact"));
+const ProjectDetails = lazy(() => import("./components/ProjectDetail"));
+const NotFoundPage = lazy(() => import("./Pages/404"));
+
+// Loading fallback ringan
+const PageLoader = () => (
+  <div className="min-h-screen bg-[#030014] flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 const LandingPage = ({ showWelcome, onWelcomeComplete }) => {
   return (
@@ -77,11 +84,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage showWelcome={showWelcome} onWelcomeComplete={handleWelcomeComplete} />} />
-        <Route path="/project/:id" element={<ProjectPageLayout />} />
-         <Route path="*" element={<NotFoundPage />} /> {/* Ini route 404 */}
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route path="/" element={<LandingPage showWelcome={showWelcome} onWelcomeComplete={handleWelcomeComplete} />} />
+          <Route path="/project/:id" element={<ProjectPageLayout />} />
+          <Route path="*" element={<NotFoundPage />} /> {/* Ini route 404 */}
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }
